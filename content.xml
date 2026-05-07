@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content
+  id=""
+  name="Notifications on Map"
+  author="Chem O`Dun"
+  version="90001"
+  date="2026-05-05"
+  save="false"
+  sync="false"
+  enabled="true"
+  lastupdate="1778083876"
+  description="">
+  <dependency version="900"></dependency>
+  <dependency id="kuerteeUIExtensionsAndHUD" optional="true" name="kuertee UI Extensions and HUD" version="804"></dependency>
+  <dependency id="ws_2042901274" optional="false" name="SirNukes Mod Support APIs" version="195"></dependency>
+  <dependency id="ws_3715253556" optional="false" name="Options Helper" version="100"></dependency>
+</content>

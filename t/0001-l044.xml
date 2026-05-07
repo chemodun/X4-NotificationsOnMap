@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English -->
+<diff>
+    <add sel="/language">
+        <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+            <!-- mod identity (always first) -->
+            <t id="1">Notifications on Map</t>
+            <t id="2">Adds possibility to show the notification window in map mode.</t>
+            <!-- group labels (120+) -->
+            <t id="10000">General</t>
+            <t id="10010">Show Notifications in Map Mode</t>
+            <!-- settings labels (90000+) -->
+            <t id="90000">Debug</t>
+            <t id="90010">Debug Mode</t>
+            <t id="90012">Debug</t>
+            <t id="90013">Trace</t>
+        </page>
+    </add>
+</diff>
