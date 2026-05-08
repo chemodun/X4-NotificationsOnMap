@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <content
-  id=""
+  id="ws_3722049740"
   name="Notifications on Map"
   author="Chem O`Dun"
   version="90001"
@@ -8,7 +8,7 @@
   save="false"
   sync="false"
   enabled="true"
-  lastupdate="1778083876"
+  lastupdate="1778239471"
   description="Make the notification window available in map mode.">
   <text language="7"
     description="Make the notification window available in map mode."></text>
