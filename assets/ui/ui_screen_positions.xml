@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <diff>
   <replace sel="/components/component[@name='ui_screen_positions']/connections/connection[@name='con_messageticker_plain']/offset/position">
-    <position x="-0.272" y="-0.158" z="0.3524311"/>
+    <position x="-0.224" y="-0.13" z="0.3"/>
   </replace>
 </diff>
