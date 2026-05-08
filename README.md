@@ -45,6 +45,10 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 
 - **Debug Mode**: Sets the logging verbosity. Options: **None** (default), **Debug**, **Trace**. Useful for troubleshooting only - leave at None during normal play.
 
+## Videos
+
+[Video demonstration of the Notifications on Map](https://www.youtube.com/watch?v=dl29qbqg4LQ)
+
 ## Credits
 
 - **Author**: Chem O`Dun, on [Nexus Mods](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659) and [Steam Workshop](https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160)
@@ -55,3 +59,10 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 - [EGOSOFT](https://www.egosoft.com) - for the X series.
 - [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659) - for the `UI Extensions and HUD` that makes this extension possible.
 - [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659) - for the `Mod Support APIs` that power the UI hooks and options menu.
+
+## Changelog
+
+### [8.00.01]/[9.00.01] - 2026-05-05
+
+- **Added**
+  - Initial public version.
