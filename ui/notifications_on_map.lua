@@ -33,13 +33,13 @@ local nom = {
   menuMapConfig = {},
   isV9          = C.GetGameVersion().major >= 9,
   playerId         = nil,     -- set in nom.Init(); used to read MD blackboard config
-  showNotification = true,  -- set to false to disable showing notifications in map mode
+  showNotification = false,  -- set to false to disable showing notifications in map mode
   isMapShown       = false, -- track map visibility to avoid showing notifications when the map is hidden
 }
 
 -- *** debug helpers ***
 
-local debugLevel = "trace"   -- "none" | "debug" | "trace"
+local debugLevel = "none"   -- "none" | "debug" | "trace"
 
 local function debug(msg)
   if debugLevel ~= "none" and type(DebugError) == "function" then
@@ -89,6 +89,13 @@ function nom.onConfigChanged()
   if cfg.debugMode ~= nil then
     debugLevel = cfg.debugMode
     debug("debug mode set to: " .. tostring(debugLevel))
+    local targetDebug = debugLevel ~= "none"
+    local monitorsDebug = C.GetConfigSetting("forceToShowNotificationsDebug") == 1
+    debug("monitorsDebug: " .. tostring(monitorsDebug))
+    if targetDebug ~= monitorsDebug then
+      C.SetConfigSetting("forceToShowNotificationsDebug", targetDebug)
+      debug("Enabled showing debug notifications in monitors code")
+    end
   end
   if cfg.showNotifications ~= nil then
     nom.showNotification = cfg.showNotifications == 1

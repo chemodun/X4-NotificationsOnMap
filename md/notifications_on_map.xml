@@ -15,14 +15,14 @@
       <actions>
         <do_if value="@player.entity.$notificationsOnMapConfig == null">
           <set_value name="player.entity.$notificationsOnMapConfig" exact="table[
-            $showNotifications = 1,
+            $showNotifications = false,
             $debugMode         = 'none',
           ]" />
         </do_if>
         <set_value name="$config" exact="player.entity.$notificationsOnMapConfig" />
         <!-- forward-compat: fill keys added in later versions -->
         <do_if value="$config.$showNotifications? == false">
-          <set_value name="$config.$showNotifications" exact="1" />
+          <set_value name="$config.$showNotifications" exact="false" />
         </do_if>
         <do_if value="$config.$debugMode? == false">
           <set_value name="$config.$debugMode" exact="'none'" />

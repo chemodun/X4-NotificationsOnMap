@@ -4,12 +4,57 @@
   name="Notifications on Map"
   author="Chem O`Dun"
   version="80001"
-  date="2026-05-05"
+  date="2026-05-08"
   save="false"
   sync="false"
   enabled="true"
   lastupdate="1778083876"
-  description="">
+  description="Make the notification window available in map mode.">
+  <text language="7"
+    description="Make the notification window available in map mode."></text>
+  <!-- French -->
+  <text language="33"
+    description="Rend la fenêtre de notification disponible en mode carte."></text>
+  <!-- Spanish -->
+  <text language="34"
+    description="Hace que la ventana de notificaciones esté disponible en el modo mapa."></text>
+  <!-- Italian -->
+  <text language="39"
+    description="Rende la finestra delle notifiche disponibile nella modalità mappa."></text>
+  <!-- Czech -->
+  <text language="42"
+    description="Zpřístupní okno oznámení v režimu mapy."></text>
+  <!-- English -->
+  <text language="44"
+    description="Make the notification window available in map mode."></text>
+  <!-- Polish -->
+  <text language="48"
+    description="Udostępnia okno powiadomień w trybie mapy."></text>
+  <!-- German -->
+  <text language="49"
+    description="Macht das Benachrichtigungsfenster im Kartenmodus verfügbar."></text>
+  <!-- Portuguese -->
+  <text language="55"
+    description="Torna a janela de notificações disponível no modo de mapa."></text>
+  <!-- Japanese -->
+  <text language="81"
+    description="マップモードで通知ウィンドウを表示できるようにします。"></text>
+  <!-- Korean -->
+  <text language="82"
+    description="지도 모드에서 알림 창을 사용할 수 있도록 합니다."></text>
+  <!-- Chinese Simplified -->
+  <text language="86"
+    description="使通知窗口在地图模式下可用。"></text>
+  <!-- Chinese Traditional -->
+  <text language="88"
+    description="使通知視窗在地圖模式下可用。"></text>
+  <!-- Turkish -->
+  <text language="90"
+    description="Harita modunda bildirim penceresini kullanılabilir hale getirir."></text>
+  <!-- Ukrainian -->
+  <text language="380"
+    description="Робить вікно сповіщень доступним у режимі карти."></text>
+
   <dependency version="800" maxversion="899"></dependency>
   <dependency id="kuerteeUIExtensionsAndHUD" optional="true" name="kuertee UI Extensions and HUD" version="804"></dependency>
   <dependency id="ws_2042901274" optional="false" name="SirNukes Mod Support APIs" version="195"></dependency>

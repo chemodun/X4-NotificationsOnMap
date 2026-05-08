@@ -1309,10 +1309,15 @@ end
 
 function onTickerOnlyMode(_, enabled, showpermanently)
 	-- chemodun start
-	DebugError("Monitor: Ticker-only mode: " .. tostring(enabled) .. ", show permanently: " .. tostring(showpermanently) .. " - current ticker-only mode: " .. tostring(private.tickerOnlyMode) .. ", current show permanently: " .. tostring(private.showTickerOnlyModePermanently) .. ", force to show notifications: " .. tostring(private.forceToShowNotifications))
+	local debug = C.GetConfigSetting("forceToShowNotificationsDebug") == 1
+	if debug then
+		DebugError("Monitor: Ticker-only mode: " .. tostring(enabled) .. ", show permanently: " .. tostring(showpermanently) .. " - current ticker-only mode: " .. tostring(private.tickerOnlyMode) .. ", current show permanently: " .. tostring(private.showTickerOnlyModePermanently) .. ", force to show notifications: " .. tostring(private.forceToShowNotifications))
+	end
 	local forceToShowNotifications = C.GetConfigSetting("forceToShowNotifications") == 1
 	if enabled and forceToShowNotifications then
-		DebugError("Monitor: Force to show notifications is enabled - ignoring ticker-only mode")
+		if debug then
+			DebugError("Monitor: Force to show notifications is enabled - ignoring ticker-only mode")
+		end
 		enabled = false
 	end
 	-- chemodun end
@@ -1341,6 +1346,9 @@ function onTickerOnlyMode(_, enabled, showpermanently)
 			-- chemodun start
 			if forceToShowNotifications then
 				SetPresentationPosition(3, "messageticker_plain")
+				if debug then
+					DebugError("Monitor: Force to show notifications is enabled - setting presentation position to plain ticker")
+				end
 			else
 				SetPresentationPosition(3, "messageticker")
 			end
