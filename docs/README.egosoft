@@ -1,0 +1,62 @@
+[size=140][u]Notifications on Map[/u][/size]
+
+Makes the [b]Notification window[/b] available while the [b]Map is open[/b]. Normally, game notifications are suppressed when the Map is displayed - this mod restores them, so you never miss an alert while managing your empire.
+
+[size=130][u]Features[/u][/size]
+[list]
+[*] [b]Notifications in map mode[/b]: The notification window is shown while the map is open, just as it would be in normal flight view.
+[*] [b]It still made by Egosoft[/b]: The mod does not create a new notification system, it simply "reveals" the existing one in map mode, by forcing it to be shown and adjusting its position to minimize interference with the map UI.
+[*] [b]Notifications still suppressed in other modes[/b]: Notifications are only shown in map mode - they remain hidden in other modes (e.g. station view).
+[*] [b]Configurable[/b]: The feature can be toggled on or off from [b]Options Menu > Extension options > Notifications on Map[/b] without restarting the game.
+[*] [b]Compatible with X4 8.00 and 9.00[/b], but currently published for 9.00 only.
+[/list]
+[size=130][u]Requirements[/u][/size]
+[list]
+[*] [b]X4: Foundations[/b]: Version [b]9.00 beta 9[/b] or higher and [b]UI Extensions and HUD[/b]: Version [b]v9.0.0.0.9.1[/b] or higher by [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url].
+[*] [b]Mod Support APIs[/b]: Version 1.95 or higher by [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url]:
+[list]
+[*] Available on Steam: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042901274]SirNukes Mod Support APIs[/url]
+[*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/503]Mod Support APIs[/url]
+[/list]
+[*] [b]Options Helper[/b] version 1.0 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O\`Dun[/url]:
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556]Steam Workshop[/url]
+[*] [url=https://www.nexusmods.com/x4foundations/mods/2089]Nexus Mods[/url]
+[/list]
+[/list]
+[size=130][u]Installation[/u][/size]
+[list]
+[*] [b]Steam Workshop[/b]: Notifications on Map - currently unavailable.
+[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/2103]Notifications on Map[/url] - there are separate versions for 8.00 (8.00.xx) and 9.00 (9.00.xx), so make sure to download the correct one for your game version.
+[/list]
+[size=130][u]Usage[/u][/size]
+
+The notification window will not appear in map mode until you enable it from the extension options. Open [b]Options Menu > Extension options > Notifications on Map[/b] and toggle [b]Show Notifications in Map Mode[/b] to your preference. The change takes effect immediately - no need to restart the game.
+
+[spoiler][img]https://raw.githubusercontent.com/chemodun/X4-NotificationsOnMap/refs/heads/main/docs/images/notifications_on_map.png[/img][/spoiler]
+
+[size=130][u]Extension Options[/u][/size]
+
+Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure the mod.
+
+[spoiler][img]https://raw.githubusercontent.com/chemodun/X4-NotificationsOnMap/refs/heads/main/docs/images/options.png[/img][/spoiler]
+
+[size=125][u]General[/u][/size]
+[list]
+[*] [b]Show Notifications in Map Mode[/b]: Enable or disable the notification window while the map is open. Default: on.
+[/list]
+[size=125][u]Debug[/u][/size]
+[list]
+[*] [b]Debug Mode[/b]: Sets the logging verbosity. Options: [b]None[/b] (default), [b]Debug[/b], [b]Trace[/b]. Useful for troubleshooting only - leave at None during normal play.
+[/list]
+[size=130][u]Credits[/u][/size]
+[list]
+[*] [b]Author[/b]: Chem O`Dun, on [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Nexus Mods[/url] and [url=https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160]Steam Workshop[/url]
+[*] [i]"X4: Foundations"[/i] is a trademark of [url=https://www.egosoft.com]Egosoft[/url].
+[/list]
+[size=130][u]Acknowledgements[/u][/size]
+[list]
+[*] [url=https://www.egosoft.com]EGOSOFT[/url] - for the X series.
+[*] [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url] - for the [b]UI Extensions and HUD[/b] that makes this extension possible.
+[*] [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url] - for the [b]Mod Support APIs[/b] that power the UI hooks and options menu.
+[/list]
