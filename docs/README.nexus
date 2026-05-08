@@ -49,6 +49,11 @@ Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure
 [list]
 [*] [b]Debug Mode[/b]: Sets the logging verbosity. Options: [b]None[/b] (default), [b]Debug[/b], [b]Trace[/b]. Useful for troubleshooting only - leave at None during normal play.
 [/list]
+[size=3][u][b]Videos[/b][/u][/size]
+
+Video demonstration of the Notifications on Map
+[youtube]dl29qbqg4LQ[/youtube]
+
 [size=3][u][b]Credits[/b][/u][/size]
 [list]
 [*] [b]Author[/b]: Chem O`Dun, on [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Nexus Mods[/url] and [url=https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160]Steam Workshop[/url]
@@ -59,4 +64,13 @@ Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure
 [*] [url=https://www.egosoft.com]EGOSOFT[/url] - for the X series.
 [*] [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url] - for the [b]UI Extensions and HUD[/b] that makes this extension possible.
 [*] [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url] - for the [b]Mod Support APIs[/b] that power the UI hooks and options menu.
+[/list]
+[size=3][u][b]Changelog[/b][/u][/size]
+
+[size=3][u][i][8.00.01]/[9.00.01] - 2026-05-05[/i][/u][/size]
+[list]
+[*] [b]Added[/b]
+[list]
+[*] Initial public version.
+[/list]
 [/list]
