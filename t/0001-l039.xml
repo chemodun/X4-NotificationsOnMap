@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Italian -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">Notifiche sulla mappa</t>
+      <t id="2">Rende la finestra delle notifiche disponibile nella modalità mappa.</t>
+      <t id="10000">Generale</t>
+      <t id="10010">Mostra le notifiche in modalità mappa</t>
+      <t id="90000">Debug</t>
+      <t id="90010">Modalità debug</t>
+      <t id="90012">Debug</t>
+      <t id="90013">Traccia</t>
+    </page>
+  </add>
+</diff>

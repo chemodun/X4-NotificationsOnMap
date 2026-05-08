@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- German -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">Benachrichtigungen auf der Karte</t>
+      <t id="2">Macht das Benachrichtigungsfenster im Kartenmodus verfügbar.</t>
+      <t id="10000">Allgemein</t>
+      <t id="10010">Benachrichtigungen im Kartenmodus anzeigen</t>
+      <t id="90000">Debug</t>
+      <t id="90010">Debug-Modus</t>
+      <t id="90012">Debug</t>
+      <t id="90013">Trace</t>
+    </page>
+  </add>
+</diff>

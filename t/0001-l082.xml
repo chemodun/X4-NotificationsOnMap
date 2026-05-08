@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Korean -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">지도의 알림</t>
+      <t id="2">지도 모드에서 알림 창을 사용할 수 있도록 합니다.</t>
+      <t id="10000">일반</t>
+      <t id="10010">지도 모드에서 알림 표시</t>
+      <t id="90000">디버그</t>
+      <t id="90010">디버그 모드</t>
+      <t id="90012">디버그</t>
+      <t id="90013">추적</t>
+    </page>
+  </add>
+</diff>

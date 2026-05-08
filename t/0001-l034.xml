@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Spanish -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">Notificaciones en el mapa</t>
+      <t id="2">Hace que la ventana de notificaciones esté disponible en el modo mapa.</t>
+      <t id="10000">General</t>
+      <t id="10010">Mostrar notificaciones en modo mapa</t>
+      <t id="90000">Depuración</t>
+      <t id="90010">Modo de depuración</t>
+      <t id="90012">Depuración</t>
+      <t id="90013">Rastreo</t>
+    </page>
+  </add>
+</diff>

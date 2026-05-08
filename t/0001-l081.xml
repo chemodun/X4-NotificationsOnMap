@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Japanese -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">マップ上の通知</t>
+      <t id="2">マップモードで通知ウィンドウを表示できるようにします。</t>
+      <t id="10000">一般</t>
+      <t id="10010">マップモードで通知を表示する</t>
+      <t id="90000">デバッグ</t>
+      <t id="90010">デバッグモード</t>
+      <t id="90012">デバッグ</t>
+      <t id="90013">トレース</t>
+    </page>
+  </add>
+</diff>

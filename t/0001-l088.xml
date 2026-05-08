@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chinese Traditional -->
+<diff>
+  <add sel="/language">
+    <page id="1972092425" title="Notifications on Map" descr="" voice="no">
+      <t id="1">地圖通知</t>
+      <t id="2">使通知視窗在地圖模式下可用。</t>
+      <t id="10000">一般</t>
+      <t id="10010">在地圖模式下顯示通知</t>
+      <t id="90000">除錯</t>
+      <t id="90010">除錯模式</t>
+      <t id="90012">除錯</t>
+      <t id="90013">追蹤</t>
+    </page>
+  </add>
+</diff>
