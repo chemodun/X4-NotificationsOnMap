@@ -3,12 +3,12 @@
   id="ws_3722049740"
   name="Notifications on Map"
   author="Chem O`Dun"
-  version="80001"
+  version="80002"
   date="2026-05-10"
   save="false"
   sync="false"
   enabled="true"
-  lastupdate="1778405957"
+  lastupdate="1778426607"
   description="Make the notification window available in map mode.">
   <text language="7"
     description="Make the notification window available in map mode."></text>
