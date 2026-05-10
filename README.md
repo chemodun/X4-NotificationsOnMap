@@ -65,6 +65,11 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 
 ## Changelog
 
+### [8.00.02]/[9.00.02] - 2026-05-10
+
+- **Fixed**
+  - Extra windows was displayed when switched from flight mode.
+
 ### [8.00.01]/[9.00.01] - 2026-05-10
 
 - **Added**

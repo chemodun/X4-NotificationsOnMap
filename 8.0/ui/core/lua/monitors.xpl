@@ -1308,6 +1308,7 @@ function onTeleportSucceeded()
 end
 
 function onTickerOnlyMode(_, enabled, showpermanently)
+	private.tickerOnlyMode = enabled
 	-- chemodun start
 	local debug = C.GetConfigSetting("forceToShowNotificationsDebug") == 1
 	if debug then
@@ -1318,10 +1319,9 @@ function onTickerOnlyMode(_, enabled, showpermanently)
 		if debug then
 			DebugError("Monitor: Force to show notifications is enabled - ignoring ticker-only mode")
 		end
-		enabled = false
+		private.tickerOnlyMode = false
 	end
 	-- chemodun end
-	private.tickerOnlyMode = enabled
 	private.showTickerOnlyModePermanently = showpermanently
 
 	if private.tickerOnlyMode and (not private.showTickerOnlyModePermanently) then
@@ -1343,16 +1343,7 @@ function onTickerOnlyMode(_, enabled, showpermanently)
 				deactivateMonitor(false)
 			end
 		else
-			-- chemodun start
-			if forceToShowNotifications then
-				SetPresentationPosition(3, "messageticker_plain")
-				if debug then
-					DebugError("Monitor: Force to show notifications is enabled - setting presentation position to plain ticker")
-				end
-			else
-				SetPresentationPosition(3, "messageticker")
-			end
-			-- chemodun end
+			SetPresentationPosition(3, "messageticker")
 			-- restore softtarget
 			local softtargetDetails = C.GetSofttarget2()
 			if softtargetDetails.softtargetID ~= 0 then
@@ -2566,6 +2557,11 @@ function isHighestState(state)
 end
 
 function isSeparateRadarEnabled()
+	-- chemodun start
+	if C.GetConfigSetting("forceToShowNotifications") == 1 then
+		return false -- separate radar is not compatible with forced notifications, since the radar display can cause notifications to be hidden behind the radar
+	end
+	-- chemodun end
 	return private.allowRadar and (not private.tickerOnlyMode) and private.radarEnabled and private.enableSeparateRadar
 end
 
