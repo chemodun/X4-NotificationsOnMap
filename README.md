@@ -9,9 +9,11 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 - **Notifications still suppressed in other modes**: Notifications are only shown in map mode - they remain hidden in other modes (e.g. station view).
 - **Configurable**: The feature can be toggled on or off from **Options Menu > Extension options > Notifications on Map** without restarting the game.
 - **Compatible with X4 8.00 and 9.00**, but currently published for 9.00 only.
+- **Can work with SWI** - please check instructions in [Forum tab](https://www.nexusmods.com/x4foundations/mods/2103?tab=forum) on Nexus mods.
 
 ## Requirements
 
+- Please use only **latest version** of the **UI Extensions and HUD** for appropriate game version!
 - **X4: Foundations**: Version **8.00** and **UI Extensions and HUD**: Version **v8.0.4.5** or higher (in v8.x branch) by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659).
 - **X4: Foundations**: Version **9.00 beta 9** or higher and **UI Extensions and HUD**: Version **v9.0.0.0.8.6** or higher (in v9.x branch) by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659).
 - **Mod Support APIs**: Version 1.95 or higher by [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659):
