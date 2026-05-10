@@ -69,6 +69,13 @@ Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure
 [/list]
 [size=130][u]Changelog[/u][/size]
 
+[size=125][u][8.00.02]/[9.00.02] - 2026-05-10[/u][/size]
+[list]
+[*] [b]Fixed[/b]
+[list]
+[*] Extra windows was displayed when switched from flight mode.
+[/list]
+[/list]
 [size=125][u][8.00.01]/[9.00.01] - 2026-05-10[/u][/size]
 [list]
 [*] [b]Added[/b]

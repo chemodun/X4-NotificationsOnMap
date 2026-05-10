@@ -70,6 +70,13 @@ Video demonstration of the Notifications on Map
 [/list]
 [h2][b]Changelog[/b][/h2]
 
+[h2][8.00.02]/[9.00.02] - 2026-05-10[/h2]
+[list]
+[*] [b]Fixed[/b]
+[list]
+[*] Extra windows was displayed when switched from flight mode.
+[/list]
+[/list]
 [h2][8.00.01]/[9.00.01] - 2026-05-10[/h2]
 [list]
 [*] [b]Added[/b]
