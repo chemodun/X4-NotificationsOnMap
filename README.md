@@ -25,7 +25,7 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 
 ## Installation
 
-- **Steam Workshop**: Notifications on Map - currently unavailable.
+- **Steam Workshop**: [Notifications on Map](https://steamcommunity.com/sharedfiles/filedetails/?id=3722049740) - currently only for 8.00, due to limitations of Steam Workshop for X4 mods.
 - **Nexus Mods**: [Notifications on Map](https://www.nexusmods.com/x4foundations/mods/2103) - there are separate versions for 8.00 (8.00.xx) and 9.00 (9.00.xx), so make sure to download the correct one for your game version.
 
 ## Usage
