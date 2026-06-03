@@ -11,12 +11,13 @@
 
     <!-- Reads (or initialises) mod config from player.entity.$notificationsOnMapConfig.
          Leaves a local $config reference; caller must <remove_value name="$config" />. -->
-    <library name="DefaultConfig" purpose="include_actions" version="1">
+    <library name="DefaultConfig" purpose="include_actions" version="2">
       <actions>
         <do_if value="@player.entity.$notificationsOnMapConfig == null">
           <set_value name="player.entity.$notificationsOnMapConfig" exact="table[
             $showNotifications = false,
             $debugMode         = 'none',
+            $switchViaContextMenu = false
           ]" />
         </do_if>
         <set_value name="$config" exact="player.entity.$notificationsOnMapConfig" />
@@ -27,6 +28,10 @@
         <do_if value="$config.$debugMode? == false">
           <set_value name="$config.$debugMode" exact="'none'" />
         </do_if>
+        <do_if value="$config.$switchViaContextMenu? == false">
+          <set_value name="$config.$switchViaContextMenu" exact="false" />
+        </do_if>
+        <set_value name="$debugChance" exact="if $config.$debugMode != 'none' then 100 else 0" />
       </actions>
     </library>
 
@@ -65,6 +70,17 @@
           <param name="col" value="1" />
           <param name="textColSpan" value="11" />
           <param name="text" value="{1972092425, 10010}" />
+          <param name="data" value="$config" />
+          <param name="handle" value="Handle_Checkbox_Changed" />
+        </run_actions>
+
+        <include_actions ref="md.Options_Helper.Add_Empty_Row" />
+
+        <run_actions ref="md.Options_Helper.Add_Checkbox">
+          <param name="id" value="'switchViaContextMenu'" />
+          <param name="col" value="1" />
+          <param name="textColSpan" value="11" />
+          <param name="text" value="{1972092425, 10020}" />
           <param name="data" value="$config" />
           <param name="handle" value="Handle_Checkbox_Changed" />
         </run_actions>
