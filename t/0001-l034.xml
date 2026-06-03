@@ -5,8 +5,11 @@
     <page id="1972092425" title="Notifications on Map" descr="" voice="no">
       <t id="1">Notificaciones en el mapa</t>
       <t id="2">Hace que la ventana de notificaciones esté disponible en el modo mapa.</t>
+      <t id="1001">Mostrar ventana de notificaciones</t>
+      <t id="1002">Ocultar ventana de notificaciones</t>
       <t id="10000">General</t>
       <t id="10010">Mostrar notificaciones en modo mapa</t>
+      <t id="10020">Cambiar mediante el menú contextual</t>
       <t id="90000">Depuración</t>
       <t id="90010">Modo de depuración</t>
       <t id="90012">Depuración</t>

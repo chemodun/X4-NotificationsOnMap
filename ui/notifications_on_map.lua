@@ -23,18 +23,51 @@ ffi.cdef[[
 
 -- *** constants ***
 
-local PAGE_ID  = 1972092425
+local PAGE_ID = 1972092425
 
 
 -- *** module table ***
 
 local nom = {
-  menuMap       = nil,
-  menuMapConfig = {},
-  isV9          = C.GetGameVersion().major >= 9,
-  playerId         = nil,     -- set in nom.Init(); used to read MD blackboard config
-  showNotification = false,  -- set to false to disable showing notifications in map mode
-  isMapShown       = false, -- track map visibility to avoid showing notifications when the map is hidden
+  menuMap           = nil,
+  menuInteract      = nil,
+  menuMapConfig     = {},
+  isV9              = C.GetGameVersion().major >= 9,
+  playerId          = nil,     -- set in nom.Init(); used to read MD blackboard config
+  showNotification  = false,  -- set to false to disable showing notifications in map mode
+  isMapShown        = false, -- track map visibility to avoid showing notifications when the map is hidden
+  isSectionAdded   = false,
+  switchViaContextMenu = false, -- whether to show the options to switch notifications on/off in map mode in the context menu of the notification window (instead of always showing them in the Interact Menu when the map is open)
+}
+
+local config = {
+  contextMenuSection           = { id = "notificationsOnMap", text = ReadText(1972092425, 1), isorder = false },
+  contextMenuActions           = {
+    ["showNotifications"] = {
+      type = "notificationsOnMap",
+      actiontype = "lua;showNotifications",
+      showNotification = true,
+      text = ReadText(1972092425, 1001),
+      scriptFunction = function()
+        nom.changeNotificationsStateInConfig(true)
+        nom.onConfigChanged()
+        nom.forceNotificationsStateToReApply()
+        nom.interactMenuFinishAction()
+      end
+    },
+    ["hideNotifications"] = {
+      type = "notificationsOnMap",
+      actiontype = "lua;hideNotifications",
+      showNotification = false,
+      text = ReadText(1972092425, 1002),
+      scriptFunction = function()
+        nom.changeNotificationsStateInConfig(false)
+        nom.onConfigChanged()
+        nom.forceNotificationsStateToReApply()
+        nom.interactMenuFinishAction()
+      end
+    },
+  }
 }
 
 -- *** debug helpers ***
@@ -97,15 +130,106 @@ function nom.onConfigChanged()
       debug("Enabled showing debug notifications in monitors code")
     end
   end
+  if cfg.switchViaContextMenu ~= nil then
+    nom.switchViaContextMenu = cfg.switchViaContextMenu == 1
+    debug("switchViaContextMenu set to: " .. tostring(nom.switchViaContextMenu))
+  end
   if cfg.showNotifications ~= nil then
     nom.showNotification = cfg.showNotifications == 1
-    debug("showNotifications set to: " .. tostring(nom.showNotification))
+    debug("showNotifications set to: " .. tostring(nom.showNotifications))
     nom.setNotificationConfigState()
   end
 end
 
-nom.Init = function(menuMap)
+function nom.changeNotificationsStateInConfig(show)
+  if nom.playerId == nil then return end
+  local cfg = GetNPCBlackboard(nom.playerId, "$notificationsOnMapConfig")
+  if cfg == nil then return end
+  if cfg.showNotifications ~= nil then
+    local currentState = cfg.showNotifications == 1
+    if currentState ~= show then
+      cfg.showNotifications = show and 1 or 0
+      SetNPCBlackboard(nom.playerId, "$notificationsOnMapConfig", cfg)
+      debug("Changed showNotifications in config to: " .. tostring(show))
+    end
+  end
+end
+
+function nom.forceNotificationsStateToReApply()
+  C.SetConfigSetting("forceNotificationsStateToReApply", true)
+  debug("Set temporary config to trigger re-application of notifications state in monitors code")
+end
+
+function nom.prepareSections(sections)
+  if not nom.isSectionAdded then
+    sections[#sections + 1] = config.contextMenuSection
+    nom.isSectionAdded = true
+  end
+end
+
+function nom.insertLuaAction(actionType, _)
+  if nom.isSectionAdded and config.contextMenuActions[actionType] then
+    nom.menuInteract.insertInteractionContent(config.contextMenuSection.id, {
+      type = config.contextMenuSection.id,
+      text = config.contextMenuActions[actionType].text,
+      script = config.contextMenuActions[actionType].scriptFunction,
+      mouseOverText = "",
+      helpOverlayID = "",
+      helpOverlayText = "",
+      helperOverlayHighlightOnly = true
+    })
+  end
+end
+
+function nom.prepareActions(actions, definedActions)
+  if nom.isSectionAdded and nom.menuMap.shown and nom.switchViaContextMenu then
+    local isToBeDisplayed = false
+    for _, action in pairs(config.contextMenuActions) do
+      isToBeDisplayed = nom.isActionToBeDisplayed(action)
+      if isToBeDisplayed then
+        nom.addAction(actions, definedActions, action, isToBeDisplayed)
+      end
+    end
+  end
+end
+
+function nom.addAction(actions, definedActions, action, isToBeDisplayed)
+  table.insert(actions, {
+    id = #actions,
+    text = action.text,
+    actiontype = action.actiontype,
+    active = isToBeDisplayed,
+    istobedisplayed = isToBeDisplayed
+  })
+  definedActions[action.actiontype] = #actions
+end
+
+function nom.isActionToBeDisplayed(action)
+  local display = false
+  if action.type == config.contextMenuSection.id then
+    if nom.showNotification ~= action.showNotification then
+      display = true
+    end
+  end
+  return display
+
+end
+
+function nom.interactMenuFinishAction()
+  if nom.menuInteract.shown then
+    nom.menuInteract.onCloseElement("close")
+  else
+    Helper.resetUpdateHandler()
+    local _config = nom.menuInteract.uix_getConfig()
+    Helper.clearFrame(nom.menuInteract, _config.layer)
+    Helper.returnFromInteractMenu(nom.menuInteract.currentOverTable, "refresh")
+    nom.menuInteract.cleanup()
+  end
+end
+
+nom.Init = function(menuMap, menuInteract)
   nom.menuMap = menuMap
+  nom.menuInteract = menuInteract
   nom.menuMapConfig = menuMap.uix_getConfig() or {}
 
   nom.playerId = ConvertStringTo64Bit(tostring(C.GetPlayerID()))
@@ -113,6 +237,10 @@ nom.Init = function(menuMap)
   menuMap.registerCallback("on_menu_cleanup", nom.onMenuCleanup)
   menuMap.registerCallback("on_menu_minimize", nom.onMenuMinimize)
   menuMap.registerCallback("on_create_main_frame", nom.onCreateMainFrame)
+
+  menuInteract.registerCallback("prepareSections_on_start", nom.prepareSections)
+  menuInteract.registerCallback("prepareActions_prepare_custom_action", nom.prepareActions)
+  menuInteract.registerCallback("insertLuaAction_insert_custom_action", nom.insertLuaAction)
 
   RegisterEvent("NotificationsOnMap.ConfigChanged", nom.onConfigChanged)
   nom.onConfigChanged()
@@ -128,7 +256,13 @@ local function Init()
     return
   end
 
-  nom.Init(menuMap)
+  local menuInteract = Helper.getMenu("InteractMenu")
+  if menuInteract == nil or type(menuInteract.registerCallback) ~= "function" then
+    debug("InteractMenu not found - kuertee UI Extensions not loaded?")
+    return
+  end
+
+  nom.Init(menuMap, menuInteract)
 end
 
 Register_OnLoad_Init(Init)

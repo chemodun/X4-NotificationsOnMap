@@ -5,8 +5,11 @@
     <page id="1972092425" title="Notifications on Map" descr="" voice="no">
       <t id="1">Oznámení na mapě</t>
       <t id="2">Zpřístupní okno oznámení v režimu mapy.</t>
+      <t id="1001">Zobrazit okno oznámení</t>
+      <t id="1002">Skrýt okno oznámení</t>
       <t id="10000">Obecné</t>
       <t id="10010">Zobrazovat oznámení v režimu mapy</t>
+      <t id="10020">Přepnout přes kontextové menu</t>
       <t id="90000">Ladění</t>
       <t id="90010">Režim ladění</t>
       <t id="90012">Ladění</t>

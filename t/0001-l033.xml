@@ -5,8 +5,11 @@
     <page id="1972092425" title="Notifications on Map" descr="" voice="no">
       <t id="1">Notifications sur la carte</t>
       <t id="2">Rend la fenêtre de notification disponible en mode carte.</t>
+      <t id="1001">Afficher la fenêtre des notifications</t>
+      <t id="1002">Masquer la fenêtre des notifications</t>
       <t id="10000">Général</t>
       <t id="10010">Afficher les notifications en mode carte</t>
+      <t id="10020">Basculer via le menu contextuel</t>
       <t id="90000">Débogage</t>
       <t id="90010">Mode de débogage</t>
       <t id="90012">Débogage</t>

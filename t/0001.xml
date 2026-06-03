@@ -6,9 +6,13 @@
             <!-- mod identity (always first) -->
             <t id="1">Notifications on Map</t>
             <t id="2">Make the notification window available in map mode.</t>
+            <!-- Interact Menu options -->
+            <t id="1001">Show Notifications Window</t>
+            <t id="1002">Hide Notifications Window</t>
             <!-- group labels (120+) -->
             <t id="10000">General</t>
             <t id="10010">Show Notifications in Map Mode</t>
+            <t id="10020">Switch via Context Menu</t>
             <!-- settings labels (90000+) -->
             <t id="90000">Debug</t>
             <t id="90010">Debug Mode</t>
