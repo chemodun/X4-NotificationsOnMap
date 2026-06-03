@@ -985,6 +985,17 @@ function self:onUpdate()
 		processLiveUpdateValues()
 	end
 
+	-- chemodun start
+	local forceReapply = C.GetConfigSetting("forceNotificationsStateToReApply") == 1
+	if forceReapply then
+		C.SetConfigSetting("forceNotificationsStateToReApply", false)
+		if debug then
+			DebugError("Monitor: Forcing notifications to re-apply")
+		end
+		onTickerOnlyMode(false, true, private.showTickerOnlyModePermanently)
+	end
+	-- chemodun end
+
 	updateMessageTicker()
 	updateRadar()
 	updateActivityColor()
@@ -1313,10 +1324,10 @@ function onTickerOnlyMode(_, enabled, showpermanently)
 	private.tickerOnlyMode = enabled
 	-- chemodun start
 	local debug = C.GetConfigSetting("forceToShowNotificationsDebug") == 1
-	if debug then
-		DebugError("Monitor: Ticker-only mode: " .. tostring(enabled) .. ", show permanently: " .. tostring(showpermanently) .. " - current ticker-only mode: " .. tostring(private.tickerOnlyMode) .. ", current show permanently: " .. tostring(private.showTickerOnlyModePermanently) .. ", force to show notifications: " .. tostring(private.forceToShowNotifications))
-	end
 	local forceToShowNotifications = C.GetConfigSetting("forceToShowNotifications") == 1
+	if debug then
+		DebugError("Monitor: Ticker-only mode: " .. tostring(enabled) .. ", show permanently: " .. tostring(showpermanently) .. " - current ticker-only mode: " .. tostring(private.tickerOnlyMode) .. ", current show permanently: " .. tostring(private.showTickerOnlyModePermanently) .. ", force to show notifications: " .. tostring(forceToShowNotifications))
+	end
 	if enabled and forceToShowNotifications then
 		if debug then
 			DebugError("Monitor: Force to show notifications is enabled - ignoring ticker-only mode")
