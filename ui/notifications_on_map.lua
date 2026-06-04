@@ -120,6 +120,7 @@ function nom.onConfigChanged()
   local cfg = GetNPCBlackboard(nom.playerId, "$notificationsOnMapConfig")
   if cfg == nil then return end
   if cfg.debugMode ~= nil then
+    local oldDebugLevel = debugLevel
     debugLevel = cfg.debugMode
     debug("debug mode set to: " .. tostring(debugLevel))
     local targetDebug = debugLevel ~= "none"
@@ -128,6 +129,9 @@ function nom.onConfigChanged()
     if targetDebug ~= monitorsDebug then
       C.SetConfigSetting("forceToShowNotificationsDebug", targetDebug)
       debug("Enabled showing debug notifications in monitors code")
+    end
+    if oldDebugLevel == "none" and debugLevel ~= "none" then
+      nom.printGameEnvironmentStats()
     end
   end
   if cfg.switchViaContextMenu ~= nil then
@@ -225,6 +229,41 @@ function nom.interactMenuFinishAction()
     Helper.returnFromInteractMenu(nom.menuInteract.currentOverTable, "refresh")
     nom.menuInteract.cleanup()
   end
+end
+
+function nom.printGameEnvironmentStats()
+  if debugLevel == "none" then
+    return
+  end
+  local lines = {}
+  lines[#lines + 1] = "=== Game Environment ==="
+  lines[#lines + 1] = "Version: " .. GetVersionString() .. "  Build: " .. ffi.string(C.GetBuildVersionSuffix())
+
+  local extensions = GetExtensionList()
+  local dlcList = {}
+  local modList = {}
+  for _, ext in ipairs(extensions) do
+    if ext.enabled then
+      if ext.egosoftextension and ext.enabledbydefault then
+        dlcList[#dlcList + 1] = ext
+      else
+        modList[#modList + 1] = ext
+      end
+    end
+  end
+
+  lines[#lines + 1] = "--- Enabled DLCs (" .. #dlcList .. ") ---"
+  for _, dlc in ipairs(dlcList) do
+    lines[#lines + 1] = string.format("  id:%-30s  name:%-40s  v%-10s  date:%s", dlc.id, dlc.name, dlc.version, dlc.date)
+  end
+
+  lines[#lines + 1] = "--- Enabled Extensions (" .. #modList .. ") ---"
+  for _, mod in ipairs(modList) do
+    local source = mod.egosoftextension and "ego" or (mod.isworkshop and "workshop" or (mod.personal and "personal" or "local"))
+    lines[#lines + 1] = string.format("  id:%-30s  name:%-40s  author:%-25s  [%s]  v%-10s  date:%s", mod.id, mod.name, mod.author or "", source, mod.version, mod.date)
+  end
+
+  debug(table.concat(lines, "\n"))
 end
 
 nom.Init = function(menuMap, menuInteract)
