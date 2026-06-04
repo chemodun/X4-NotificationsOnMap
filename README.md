@@ -72,6 +72,11 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 
 ## Changelog
 
+### [8.00.04]/[9.00.04] - 2026-06-04
+
+- **Fixed**
+  - Version 8.x.x distributive on steam
+
 ### [8.00.03]/[9.00.03] - 2026-06-04
 
 - **Added**
