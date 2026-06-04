@@ -7,9 +7,9 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 - **Notifications in map mode**: The notification window is shown while the map is open, just as it would be in normal flight view.
 - **It still made by Egosoft**: The mod does not create a new notification system, it simply "reveals" the existing one in map mode, by forcing it to be shown and adjusting its position to minimize interference with the map UI.
 - **Notifications still suppressed in other modes**: Notifications are only shown in map mode - they remain hidden in other modes (e.g. station view).
-- **Configurable**: The feature can be toggled on or off from **Options Menu > Extension options > Notifications on Map** without restarting the game.
+- **Configurable**: The feature can be toggled on or off as via **Options Menu > Extension options > Notifications on Map** as via **Context Menu**.
 - **Compatible with X4 8.00 and 9.00**, but currently published for 9.00 only.
-- **Can work with SWI** - please check instructions in [Forum tab](https://www.nexusmods.com/x4foundations/mods/2103?tab=forum) on Nexus mods.
+- **Can work with SWI** - please use with the [kuertee UI Extensions and HUD for SW Interworlds adoption mod](https://www.nexusmods.com/x4foundations/mods/2134).
 
 ## Requirements
 
@@ -34,6 +34,12 @@ The notification window will not appear in map mode until you enable it from the
 
 ![Notifications Window in Map Mode](docs/images/notifications_on_map.png)
 
+### Context Menu
+
+Simple press righ button in the map mode on free space in any sector and you will see the context menu with options to show or hide notifications in map mode.
+
+![Context Menu to Show Notifications](docs/images/context_menu_to_show.png)![Context Menu to Hide Notifications](docs/images/context_menu_to_hide.png)
+
 ## Extension Options
 
 Open **Options Menu > Extension options > Notifications on Map** to configure the mod.
@@ -51,6 +57,7 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 ## Videos
 
 [Video demonstration of the Notifications on Map](https://www.youtube.com/watch?v=dl29qbqg4LQ)
+[Video demonstration of the switching via Context Menu](https://www.youtube.com/watch?v=5Kj8zFEGel4)
 
 ## Credits
 
@@ -64,6 +71,11 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 - [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659) - for the `Mod Support APIs` that power the UI hooks and options menu.
 
 ## Changelog
+
+### [8.00.03]/[9.00.03] - 2026-06-04
+
+- **Added**
+  - Context menu switching between showing and hiding notifications in map mode.
 
 ### [8.00.02]/[9.00.02] - 2026-05-10
 
