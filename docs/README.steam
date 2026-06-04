@@ -52,7 +52,8 @@ Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure
 
 [h2]General[/h2]
 [list]
-[*] [b]Show Notifications in Map Mode[/b]: Enable or disable the notification window while the map is open. Default: on.
+[*] [b]Show Notifications in Map Mode[/b]: Enable or disable the notification window while the map is open. Default: off.
+[*] [b]Switch via Context Menu[/b]: Enable or disable the context menu options to show/hide notifications in map mode. Default: off.
 [/list]
 [h2]Debug[/h2]
 [list]
