@@ -15,7 +15,7 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 
 - Please use only **latest version** of the **UI Extensions and HUD** for appropriate game version!
 - **X4: Foundations**: Version **8.00** and **UI Extensions and HUD**: Version **v8.0.4.5** or higher (in v8.x branch) by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659).
-- **X4: Foundations**: Version **9.00 beta 9** or higher and **UI Extensions and HUD**: Version **v9.0.0.0.8.6** or higher (in v9.x branch) by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659).
+- **X4: Foundations**: Version **9.00** or higher and **UI Extensions and HUD**: Version **v9.0.0.5** or higher (in v9.x branch) by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659).
 - **Mod Support APIs**: Version 1.95 or higher by [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659):
   - Available on Steam: [SirNukes Mod Support APIs](https://steamcommunity.com/sharedfiles/filedetails/?id=2042901274)
   - Available on Nexus Mods: [Mod Support APIs](https://www.nexusmods.com/x4foundations/mods/503)
@@ -72,6 +72,11 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 - [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659) - for the `Mod Support APIs` that power the UI hooks and options menu.
 
 ## Changelog
+
+### [9.00.05] - 2026-06-04
+
+- **Changed**
+  - On Steam: restricted to game version 9.0 or higher
 
 ### [8.00.04]/[9.00.04] - 2026-06-04
 
