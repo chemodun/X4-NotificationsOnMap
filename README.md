@@ -73,7 +73,7 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 
 ## Changelog
 
-### [9.00.05] - 2026-06-04
+### [9.00.05] - 2026-06-27
 
 - **Changed**
   - On Steam: restricted to game version 9.0 or higher
