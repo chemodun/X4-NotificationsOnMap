@@ -26,6 +26,7 @@ Makes the [b]Notification window[/b] available while the [b]Map is open[/b]. Nor
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556]Steam Workshop[/url]
 [*] [url=https://www.nexusmods.com/x4foundations/mods/2089]Nexus Mods[/url]
 [/list]
+[*] [b](Optional)[/b] [url=https://www.nexusmods.com/x4foundations/mods/2181]Native Hotkey API[/url] version 8.00.03 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O\`Dun[/url] - only needed to assign a hotkey for toggling notifications in map mode. Not required otherwise.
 [/list]
 [h2][b]Installation[/b][/h2]
 [list]
@@ -43,6 +44,10 @@ The notification window will not appear in map mode until you enable it from the
 Simple press righ button in the map mode on free space in any sector and you will see the context menu with options to show or hide notifications in map mode.
 
 [img]https://raw.githubusercontent.com/chemodun/X4-NotificationsOnMap/refs/heads/main/docs/images/context_menu_to_show.png[/img][img]https://raw.githubusercontent.com/chemodun/X4-NotificationsOnMap/refs/heads/main/docs/images/context_menu_to_hide.png[/img]
+
+[h2]Hotkey (optional)[/h2]
+
+If [url=https://www.nexusmods.com/x4foundations/mods/2181]Native Hotkey API[/url] is installed, a [b]Toggle Notifications Window in Map Mode[/b] action becomes available in its [b]Hotkey Management[/b] menu (added to the top-level Options menu), so you can assign a key to toggle the feature on/off without opening any menu. This is a purely optional integration - no extra configuration option is added here, and the mod works exactly the same without Native Hotkey API installed.
 
 [h2][b]Extension Options[/b][/h2]
 
@@ -79,6 +84,17 @@ Video demonstration of the switching via Context Menu
 [/list]
 [h2][b]Changelog[/b][/h2]
 
+[h2][8.00.06]/[9.00.06] - 2026-06-30[/h2]
+[list]
+[*] [b]Fixed[/b]
+[list]
+[*] Integrated radar is now not shown in map mode too.
+[/list]
+[*] [b]Added[/b]
+[list]
+[*] Hotkey action to toggle notifications in map mode, if [url=https://www.nexusmods.com/x4foundations/mods/2181]Native Hotkey API[/url] is installed.
+[/list]
+[/list]
 [h2][9.00.05] - 2026-06-27[/h2]
 [list]
 [*] [b]Changed[/b]
