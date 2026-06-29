@@ -2593,6 +2593,11 @@ end
 -- 2. the game settings didn't disable the radar (i.e. private.radarEnabled = true)
 -- 3. we are not using the separate radar
 function isTargetMonitorRadarEnabled()
+	-- chemodun start
+	if C.GetConfigSetting("forceToShowNotifications") == 1 then
+		return false -- target monitor radar is not compatible with forced notifications, since the radar display can cause notifications to be hidden behind the radar
+	end
+	-- chemodun end
 	return private.allowRadar and (not private.tickerOnlyMode) and private.radarEnabled and not private.enableSeparateRadar
 end
 
