@@ -9,6 +9,8 @@
             <!-- Interact Menu options -->
             <t id="1001">Show Notifications Window</t>
             <t id="1002">Hide Notifications Window</t>
+            <!-- hotkey_api action name -->
+            <t id="1003">Toggle Notifications Window in Map Mode</t>
             <!-- group labels (120+) -->
             <t id="10000">General</t>
             <t id="10010">Show Notifications in Map Mode</t>

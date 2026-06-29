@@ -22,6 +22,7 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 - **Options Helper** version 1.0 or higher by [Chem O\`Dun](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659):
   - [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556)
   - [Nexus Mods](https://www.nexusmods.com/x4foundations/mods/2089)
+- **(Optional)** [Native Hotkey API](https://www.nexusmods.com/x4foundations/mods/2181) version 8.00.03 or higher by [Chem O\`Dun](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659) - only needed to assign a hotkey for toggling notifications in map mode. Not required otherwise.
 
 ## Installation
 
@@ -39,6 +40,10 @@ The notification window will not appear in map mode until you enable it from the
 Simple press righ button in the map mode on free space in any sector and you will see the context menu with options to show or hide notifications in map mode.
 
 ![Context Menu to Show Notifications](docs/images/context_menu_to_show.png)![Context Menu to Hide Notifications](docs/images/context_menu_to_hide.png)
+
+### Hotkey (optional)
+
+If [Native Hotkey API](https://www.nexusmods.com/x4foundations/mods/2181) is installed, a **Toggle Notifications Window in Map Mode** action becomes available in its **Hotkey Management** menu (added to the top-level Options menu), so you can assign a key to toggle the feature on/off without opening any menu. This is a purely optional integration - no extra configuration option is added here, and the mod works exactly the same without Native Hotkey API installed.
 
 ## Extension Options
 
@@ -72,6 +77,13 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 - [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659) - for the `Mod Support APIs` that power the UI hooks and options menu.
 
 ## Changelog
+
+### [8.00.06]/[9.00.06] - 2026-06-30
+
+- **Fixed**
+  - Integrated radar is now not shown in map mode too.
+- **Added**
+  - Hotkey action to toggle notifications in map mode, if [Native Hotkey API](https://www.nexusmods.com/x4foundations/mods/2181) is installed.
 
 ### [9.00.05] - 2026-06-27
 

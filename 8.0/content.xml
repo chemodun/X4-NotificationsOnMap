@@ -3,8 +3,8 @@
   id="ws_3722049740"
   name="Notifications on Map"
   author="Chem O`Dun"
-  version="80004"
-  date="2026-06-04"
+  version="80006"
+  date="2026-06-30"
   save="false"
   sync="false"
   enabled="true"
@@ -58,4 +58,5 @@
   <dependency id="kuerteeUIExtensionsAndHUD" optional="false" name="kuertee UI Extensions and HUD" version="804"></dependency>
   <dependency id="ws_2042901274" optional="false" name="SirNukes Mod Support APIs" version="195"></dependency>
   <dependency id="ws_3715253556" optional="false" name="Options Helper" version="100"></dependency>
+  <dependency id="ws_3750545906" optional="true" name="Native Hotkey API" version="80003"></dependency>
 </content>
