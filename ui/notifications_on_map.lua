@@ -164,6 +164,14 @@ function nom.forceNotificationsStateToReApply()
   debug("Set temporary config to trigger re-application of notifications state in monitors code")
 end
 
+function nom.toggleNotificationsState()
+  local newState = not nom.showNotification
+  nom.changeNotificationsStateInConfig(newState)
+  nom.onConfigChanged()
+  nom.forceNotificationsStateToReApply()
+  debug("Toggled showNotifications via hotkey to: " .. tostring(newState))
+end
+
 function nom.prepareSections(sections)
   if not nom.isSectionAdded then
     sections[#sections + 1] = config.contextMenuSection
@@ -282,9 +290,35 @@ nom.Init = function(menuMap, menuInteract)
   menuInteract.registerCallback("insertLuaAction_insert_custom_action", nom.insertLuaAction)
 
   RegisterEvent("NotificationsOnMap.ConfigChanged", nom.onConfigChanged)
+
+  RegisterEvent("HotkeyApi.Register_Request", nom.RegisterHotkeys)
+
   nom.onConfigChanged()
 end
 
+
+-- *** hotkey_api integration (optional - no hard dependency) ***
+-- Registers a "toggle notifications in map mode" hotkey via hotkey_api's
+-- direct-Lua path, if hotkey_api happens to be installed. No ui.xml
+-- <dependency> is declared on it - hotkey_api's "HotkeyApi.Register_Request"
+-- event simply never fires if it isn't loaded, so this stays a silent no-op.
+-- No Extension Options entry needed - the player binds the key via
+-- hotkey_api's own Hotkey Management menu instead.
+function nom.RegisterHotkeys()
+  if not (HotkeyApi and HotkeyApi.RegisterAction) then
+    debug("HotkeyApi.RegisterAction not available - is hotkey_api loaded?")
+    return
+  end
+
+  HotkeyApi.RegisterAction({
+    id = "notifications_on_map_toggle",
+    area = "map",
+    isObjectRequired = false,
+    name = ReadText(PAGE_ID, 1003),
+    version = 1,
+    actionLua = nom.toggleNotificationsState,
+  })
+end
 
 local function Init()
   debug("Initialising Notifications On Map")
