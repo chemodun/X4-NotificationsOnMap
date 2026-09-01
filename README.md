@@ -22,6 +22,9 @@ Makes the **Notification window** available while the **Map is open**. Normally,
 - **Options Helper** version 1.0 or higher by [Chem O\`Dun](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659):
   - [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556)
   - [Nexus Mods](https://www.nexusmods.com/x4foundations/mods/2089)
+- `Print Extension List`, to record the game version and the enabled extensions in the log. Version `1.01` and upper is required.
+  - [Steam Workshop] - [Print Extension List](https://steamcommunity.com/sharedfiles/filedetails/?id=3770927339)
+  - [Nexus Mods] - [Print Extension List](https://www.nexusmods.com/x4foundations/mods/2191)
 - **(Optional)** [Native Hotkey API](https://www.nexusmods.com/x4foundations/mods/2181) version 8.00.03 or higher by [Chem O\`Dun](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659) - only needed to assign a hotkey for toggling notifications in map mode. Not required otherwise.
 
 ## Installation
@@ -77,6 +80,13 @@ Open **Options Menu > Extension options > Notifications on Map** to configure th
 - [SirNukes](https://next.nexusmods.com/profile/sirnukes?gameId=2659) - for the `Mod Support APIs` that power the UI hooks and options menu.
 
 ## Changelog
+
+### [9.00.07] - 2026-09-01
+
+- **Changed**
+  - Distribution is changed to a single multi-version package for 8.00 and 9.00.
+- **Added**
+  - Print Extension List as a dependency for recording the game version and enabled extensions in the log.
 
 ### [8.00.06]/[9.00.06] - 2026-06-30
 
