@@ -21,12 +21,17 @@ Makes the [b]Notification window[/b] available while the [b]Map is open[/b]. Nor
 [*] Available on Steam: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042901274]SirNukes Mod Support APIs[/url]
 [*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/503]Mod Support APIs[/url]
 [/list]
-[*] [b]Options Helper[/b] version 1.0 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O\`Dun[/url]:
+[*] [b]Options Helper[/b] version 1.0 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O`Dun[/url]:
 [list]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556]Steam Workshop[/url]
 [*] [url=https://www.nexusmods.com/x4foundations/mods/2089]Nexus Mods[/url]
 [/list]
-[*] [b](Optional)[/b] [url=https://www.nexusmods.com/x4foundations/mods/2181]Native Hotkey API[/url] version 8.00.03 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O\`Dun[/url] - only needed to assign a hotkey for toggling notifications in map mode. Not required otherwise.
+[*] `Print Extension List`, to record the game version and the enabled extensions in the log. Version [b]1.01[/b] and upper is required.
+[list]
+[*] [Steam Workshop] - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3770927339]Print Extension List[/url]
+[*] [Nexus Mods] - [url=https://www.nexusmods.com/x4foundations/mods/2191]Print Extension List[/url]
+[/list]
+[*] [b](Optional)[/b] [url=https://www.nexusmods.com/x4foundations/mods/2181]Native Hotkey API[/url] version 8.00.03 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O`Dun[/url] - only needed to assign a hotkey for toggling notifications in map mode. Not required otherwise.
 [/list]
 [size=130][u]Installation[/u][/size]
 [list]
@@ -82,6 +87,17 @@ Open [b]Options Menu > Extension options > Notifications on Map[/b] to configure
 [/list]
 [size=130][u]Changelog[/u][/size]
 
+[size=125][u][9.00.07] - 2026-09-01[/u][/size]
+[list]
+[*] [b]Changed[/b]
+[list]
+[*] Distribution is changed to a single multi-version package for 8.00 and 9.00.
+[/list]
+[*] [b]Added[/b]
+[list]
+[*] Print Extension List as a dependency for recording the game version and enabled extensions in the log.
+[/list]
+[/list]
 [size=125][u][8.00.06]/[9.00.06] - 2026-06-30[/u][/size]
 [list]
 [*] [b]Fixed[/b]
