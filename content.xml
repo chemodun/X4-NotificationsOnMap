@@ -3,12 +3,12 @@
   id="ws_3722049740"
   name="Notifications on Map"
   author="Chem O`Dun"
-  version="90006"
-  date="2026-06-30"
+  version="90007"
+  date="2026-09-01"
   save="false"
   sync="false"
   enabled="true"
-  lastupdate="1782774299"
+  lastupdate="1788277368"
   description="Make the notification window available in map mode.">
   <text language="7"
     description="Make the notification window available in map mode."></text>
@@ -54,9 +54,9 @@
   <!-- Ukrainian -->
   <text language="380"
     description="Робить вікно сповіщень доступним у режимі карти."></text>
-  <dependency version="900"></dependency>
-  <dependency id="kuerteeUIExtensionsAndHUD" optional="false" name="kuertee UI Extensions and HUD" version="900"></dependency>
+  <dependency version="800"></dependency>
+  <dependency id="kuerteeUIExtensionsAndHUD" optional="false" name="kuertee UI Extensions and HUD"></dependency>
   <dependency id="ws_2042901274" optional="false" name="SirNukes Mod Support APIs" version="195"></dependency>
   <dependency id="ws_3715253556" optional="false" name="Options Helper" version="100"></dependency>
-  <dependency id="ws_3750545906" optional="true" name="Native Hotkey API" version="80004"></dependency>
+  <dependency id="ws_3750545906" optional="true" name="Native Hotkey API" version="80003"></dependency>
 </content>
